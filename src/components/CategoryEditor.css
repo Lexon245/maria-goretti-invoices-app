@@ -1,0 +1,103 @@
+.category-editor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background-color: #F8FAFC;
+  border: 1px solid var(--color-border-light-theme);
+  border-radius: var(--radius-md);
+}
+
+.cat-editor-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.cat-editor-row.cat-editor-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+}
+
+.cat-input {
+  background-color: var(--color-light-surface);
+  border: 1px solid var(--color-border-light-theme);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-dark-primary);
+  font-size: 0.85rem;
+  padding: 8px 10px;
+  height: 36px;
+  transition: border-color var(--transition-fast);
+}
+
+.cat-input:focus {
+  outline: none;
+  border-color: var(--color-indigo);
+}
+
+.cat-color-picker {
+  display: flex;
+  gap: 6px;
+}
+
+.cat-color-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.cat-color-swatch:hover {
+  transform: scale(1.1);
+}
+
+.cat-color-swatch.active {
+  border-color: var(--color-text-dark-primary);
+  transform: scale(1.1);
+}
+
+.cat-editor-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.cat-btn-cancel,
+.cat-btn-save {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-light-theme);
+  background: var(--color-light-surface);
+  color: var(--color-text-dark-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.cat-btn-cancel:hover {
+  color: var(--color-danger);
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.cat-btn-save {
+  background: var(--color-indigo);
+  color: #FFFFFF;
+  border-color: var(--color-indigo);
+}
+
+.cat-btn-save:hover:not(:disabled) {
+  background: var(--color-indigo-hover);
+  border-color: var(--color-indigo-hover);
+}
+
+.cat-btn-save:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

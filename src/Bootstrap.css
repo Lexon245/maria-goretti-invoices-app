@@ -1,0 +1,64 @@
+.boot-splash {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F1F5F9 0%, #E0E7FF 100%);
+  padding: 24px;
+}
+
+.boot-splash-card {
+  background: var(--color-light-surface);
+  border: 1px solid var(--color-border-light-theme);
+  border-radius: 16px;
+  padding: 28px 32px;
+  text-align: center;
+  max-width: 420px;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.12);
+}
+
+.boot-splash-card p {
+  color: var(--color-text-dark-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.boot-splash-card.error h2 {
+  font-family: var(--font-heading);
+  color: var(--color-text-dark-primary);
+  margin: 0 0 10px;
+}
+
+.boot-splash-card.error button {
+  margin-top: 14px;
+  margin-right: 8px;
+  background: var(--color-indigo);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.boot-splash-card.error button:nth-child(3) {
+  background: transparent;
+  color: var(--color-text-dark-tertiary);
+  border: 1px solid var(--color-border-light-theme);
+}
+
+.boot-splash-spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid var(--color-border-light-theme);
+  border-top-color: var(--color-indigo);
+  animation: boot-spin 0.9s linear infinite;
+  margin: 0 auto 14px;
+}
+
+@keyframes boot-spin {
+  to { transform: rotate(360deg); }
+}
