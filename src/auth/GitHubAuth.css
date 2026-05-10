@@ -1,0 +1,196 @@
+.gh-auth-page {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #F1F5F9 0%, #E0E7FF 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+.gh-auth-card {
+  background: var(--color-light-surface);
+  border: 1px solid var(--color-border-light-theme);
+  border-radius: 20px;
+  padding: 36px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.15);
+  animation: gh-auth-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes gh-auth-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.gh-auth-header { text-align: center; margin-bottom: 24px; }
+
+.gh-auth-logo {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #6366F1, #8B5CF6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 22px rgba(99, 102, 241, 0.35);
+}
+
+.gh-auth-header h1 {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  margin: 0 0 6px;
+  color: var(--color-text-dark-primary);
+}
+
+.gh-auth-header p {
+  color: var(--color-text-dark-tertiary);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.gh-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.gh-auth-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gh-auth-label > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-dark-tertiary);
+}
+
+.gh-auth-input {
+  width: 100%;
+  background: #F8FAFC;
+  border: 1px solid var(--color-border-light-theme);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  font-family: var(--font-mono);
+  color: var(--color-text-dark-primary);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gh-auth-input:focus {
+  outline: none;
+  border-color: var(--color-indigo);
+  background: #fff;
+  box-shadow: 0 0 0 3px var(--color-indigo-alpha);
+}
+
+.gh-auth-advanced { font-size: 0.85rem; }
+.gh-auth-advanced summary {
+  cursor: pointer;
+  color: var(--color-text-dark-tertiary);
+  font-weight: 500;
+  padding: 4px 0;
+}
+.gh-auth-advanced summary:hover { color: var(--color-indigo); }
+
+.gh-auth-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+.gh-auth-grid > .gh-auth-label:first-child { grid-column: 1 / -1; }
+
+.gh-auth-hint {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.gh-auth-hint.warning {
+  background: rgba(245, 158, 11, 0.08);
+  color: #92400E;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.gh-auth-hint.error {
+  background: rgba(239, 68, 68, 0.08);
+  color: #B91C1C;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.gh-auth-hint code {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+.gh-auth-help {
+  border-top: 1px solid var(--color-border-light-theme);
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: var(--color-text-dark-secondary);
+}
+
+.gh-auth-help h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-dark-tertiary);
+  margin: 0 0 10px;
+}
+
+.gh-auth-help ol {
+  padding-left: 20px;
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+
+.gh-auth-help a {
+  color: var(--color-indigo);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+.gh-auth-help a:hover { text-decoration: underline; }
+
+.gh-auth-help code {
+  background: #F1F5F9;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+}
+
+.gh-auth-warning {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #B45309;
+  background: rgba(245, 158, 11, 0.06);
+  border-left: 3px solid #F59E0B;
+  padding: 8px 10px;
+  border-radius: 4px;
+  margin: 0;
+}

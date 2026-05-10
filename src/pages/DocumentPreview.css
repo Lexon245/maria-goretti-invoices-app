@@ -1,0 +1,155 @@
+.pdf-container {
+  background-color: #525659; /* PDF viewer background */
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.pdf-page {
+  background-color: white;
+  width: 210mm; /* A4 Width */
+  min-height: 297mm; /* A4 Height */
+  padding: 25mm; /* Standard margins */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: #000;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.pdf-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25mm;
+}
+
+.client-info p, .doc-meta-right p {
+  font-size: 11pt;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.doc-meta-right {
+  text-align: right;
+}
+
+.pdf-subject-section {
+  margin-bottom: 15mm;
+}
+
+.doc-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16pt;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.doc-subject {
+  font-size: 11pt;
+  color: #333;
+  line-height: 1.4;
+}
+
+.pdf-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10mm;
+}
+
+.pdf-table th {
+  border-bottom: 1px solid #000;
+  padding: 8px 0;
+  font-size: 10pt;
+  font-weight: 600;
+  text-align: right;
+}
+
+.pdf-table th.col-desc {
+  text-align: left;
+}
+
+.pdf-table td {
+  padding: 15px 0;
+  font-size: 11pt;
+  vertical-align: top;
+}
+
+.item-description strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.item-details {
+  font-size: 10pt;
+  color: #444;
+  padding-left: 5px;
+}
+
+.col-qty, .col-rate, .col-discount, .col-total {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.pdf-total-bar {
+  background-color: #E5E5E5; /* Light grey bar from inspiration */
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  font-weight: 700;
+  font-size: 11pt;
+  margin-top: auto; /* Push to bottom if content is short */
+  margin-bottom: 15mm;
+}
+
+.pdf-notes {
+  font-size: 10pt;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 10mm;
+  padding: 8px 0;
+  border-top: 1px solid #DDD;
+}
+
+.pdf-cash-note {
+  font-size: 9.5pt;
+  font-style: italic;
+  color: #555;
+  text-align: right;
+  margin-top: -10mm;
+  margin-bottom: 12mm;
+}
+
+.pdf-footer {
+  font-size: 10pt;
+  line-height: 1.6;
+  margin-top: auto;
+  padding-top: 10mm;
+  border-top: 1px solid #DDD;
+}
+
+.bank-details {
+  margin-top: 8px;
+}
+
+.bank-details p {
+  margin: 0;
+}
+
+/* Print Overrides */
+@media print {
+  body {
+    background: white;
+  }
+  .pdf-container {
+    padding: 0;
+    background: none;
+  }
+  .pdf-page {
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
